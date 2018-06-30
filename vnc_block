@@ -1,0 +1,5 @@
+[root@softsolutions4u ~]# iptables -I INPUT -s 192.168.2.26 -p tcp --dport 5904 -j DROP
+[root@softsolutions4u ~]# iptables -I INPUT -s 192.168.2.26 -p tcp --dport 5901 -j DROP
+[root@softsolutions4u ~]# iptables -I INPUT -s 192.168.2.26 -p tcp --dport 6001 -j DROP
+[root@softsolutions4u ~]# iptables -I INPUT -s 192.168.2.26 -p tcp --dport 6004 -j DROP
+

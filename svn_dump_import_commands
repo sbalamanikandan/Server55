@@ -1,0 +1,12 @@
+svnadmin load /var/repo/source/ --parent-dir test < /home/tes.dump
+
+
+svnadmin load /var/repo/source/ < /home/checklist1.dump
+
+svn list file:///var/repo/source/
+
+svndumpfilter include checklist < /home/svn66_backup.dump > /home/checklist.dump
+
+svnadmin dump /var/repo/source/ > /home/svn66_backup.dump
+
+
