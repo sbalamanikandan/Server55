@@ -1,0 +1,34 @@
+STEPS OF SYSTEM INSTALLATION:
+
+
+ Divide Partition
+
+ Set time zone
+
+ Create username and password
+    
+ Restart the system
+    
+ After OS Installed:
+
+     Set proxy in system settings
+     Deny Pendrive access  
+     Update the softwares
+     Restart the system
+
+
+ Install following softwares :
+     Iptux,
+     Netbeans,
+     Google-chrome,
+     Lamp-server,
+     Php5,
+     Kdesvn,
+     Phpmyadmin,
+     Automatic shutdown.
+     Apache configuration
+     Create admin user
+     Games removed
+     Deny full rights to user
+     
+     

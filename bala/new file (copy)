@@ -1,0 +1,15 @@
+NameVirtualHost *:443
+
+<VirtualHost *:443>
+  DocumentRoot /var/www/html/test
+  ServerName www.test.local
+  ServerAlias *.local
+  SSLEngine on
+  SSLCertificateFile /etc/pki/tls/certs/localhost.crt
+  SSLCertificateKeyFile /etc/pki/tls/private/localhost.key
+  <Directory "/var/www/html/test">
+      AllowOverride All
+      Allow from all   
+ </Directory>
+</VirtualHost>
+

@@ -1,0 +1,254 @@
+1.The following package are Importent dependancy for other Package of Software
+
+                      yum install gcc
+                     yum install gcc-c++
+                   yum install glib2-devel 
+                    yum install gtk+-devel 
+                    yum install gtk2-devel 
+                   yum install GConf2-devel
+
+---------------------------------------------------------------------------------
+
+2.In this command used to showe verification image while uing website 
+
+                  "yum install php-gd"
+
+--------------------------------------------------------------------------------------
+
+3. To open the "."tar or "Zip" folder 
+
+"yum install file-roller"
+
+----------------------------------------------------------------------------------------
+
+4.On Desktop when you will "right click" show "Open the Terminal" in that dialogbox  
+
+             yum install nautilus-open-terminal
+
+-----------------------------------------------------------------------------------------
+
+5.If not working "ifconfig" you wil Install "Nettools" 
+
+                 yum install net-tools
+
+----------------------------------------------------------------------------------------------
+
+6.CentOS level 
+
+Default Leval 5
+
+-------------------------------------------------------------------------------------
+
+7.Difference Between "update" & "upgrade 
+ 
+update ->only update the system software 
+
+upgrade ->it's update the OS/Kernal with system package also 
+
+-------------------------------------------------------------------------------------------
+
+8.You will manually Disable the Firewall(like Windows) Selinux(like CentOS)
+
+               Command: vim /etc/selinux/config
+ 
+Through Terminal configuration  
+            command: [root~]#getenforce 1-disabled 
+
+------------------------------------------------------------------------------------
+
+9.If you have any problem while install any Development package and it's package needed to another package  
+
+           "yum groupinstall Development Tools"
+
+simillarly,Desktop Package:      
+       
+            "yum groupinstall Desktop"
+
+-------------------------------------------------------------------------------------------
+10.you can change upload file size for Two places
+
+For Squid
+
+     vim /etc/squid/squid.conf
+   
+For PhP
+
+    In ubuntu /etc/php5/apache2/php.ini ---> change the places => upload ,podt-max size
+    In Centos /etc/php.ini
+
+----------------------------------------------------------------------------------------------------------
+
+11.when create virtuvalhost you will need to configure the http and https config files
+
+you should mannually add config lines each respective configuration files like http&https
+
+In Ubuntu ==> For "http" config commend --># gedit /etc/apache2/sites-enabled/default.conf
+In CentOS ==> For "http" config commend --># vim /etc/httpd/conf/httpd.confd
+Add the lines fllowing:
+
+NameVirtualHost *:80
+
+         <VirtualHost *:80>
+ 	 DocumentRoot /var/www/cloudrexx_live
+	 ServerName www.cloudrexx.local
+   	 ServerAlias *.cloudrexx.local
+	 <Directory "/var/www/cloudrexx_live">
+ 	 AllowOverride All
+	 Allow from all
+ 	 </Directory>
+	 </VirtualHost>
+
+In ubuntu For "https" config commend -->#gedit /etc/apache2/sites-enabled/defaultssl.conf 
+In CentOS for "https" config commend -->#vim /etc/httpd/conf/httpd.conf
+
+Add the lines fllowing:
+
+NameVirtualHost *:443
+
+<VirtualHost *:443>
+  DocumentRoot /var/www/html/test
+  ServerName www.test.local
+  ServerAlias *.local
+  SSLEngine on
+  SSLCertificateFile /etc/pki/tls/certs/localhost.crt
+  SSLCertificateKeyFile /etc/pki/tls/private/localhost.key
+  <Directory "/var/www/html/test">
+  AllowOverride All
+  Allow from all   
+  </Directory>
+</VirtualHost>
+
+In centOS 
+      http problems like -->port overloop ,
+              To solve add/uncomment the Namevirtuvalhost *:80 
+      https problems like -->sslEngine , certificate key       
+              To solve sslEmgine -Install dependancy like modesll ,openssl
+              To solve Certificate -Install   
+In UbuntuOS 
+     http problems like -->same port overloop -->same solution
+     https problems like -->sslengine ,certificate
+
+----------------------------------------------------------------------------------------------------
+
+12.How to  Import/Export mySQL Files thougth Terminal
+
+you should prasent mysql shell 
+  
+Create Database: creare datebase databasename;
+
+Exit mqsql shell 
+
+Import commend:
+
+      mysql -u [username] -p newdatabase < [database name].sql
+ 
+ Export commend:
+
+      mysqldump -u [username] -p [database name] > [database name].sql
+
+ In export Process inside of mqsql shell
+
+ create database : create database databasename;
+
+ Use database    : use databasename;
+
+ Export data     : source path of data(like /root/Desktop/dataname.sql)
+
+ If you use the existing database first show database 
+
+   Commend :show databases;
+
+   use database
+
+   Export Data
+
+-----------------------------------------------------------------------------------------------
+
+13.If you want update any package 
+
+    To download the that particular Package Repository file(Website like:".lanuchpad.net") 
+
+    Added the source list --> Commend: gedit /etc/apt/source.list
+
+    Update the apt--> commend: apt-get update
+
+    Install that package--> Commend: apt-get install package Name
+---------------------------------------------------------------------------------------------------
+14.While updating the sytem shutdown or Restart
+
+  you can ue this commend : to resolve the problem 
+   Commend : dpkg --configure -a
+                OR
+   Commend : sudo dpkg --comfigure -a
+
+--------------------------------------------------------------------------------------------------
+15.how to install and configure phpmyadmin on ubuntu
+
+Install phpMyAdmin
+-------------------
+
+#apt-get install phpmyadmin apache2-utils
+
+ it will ask user-root and passwd-123456
+
+phpmyadmin to the apache configuration
+---------------------------------------
+
+Add the following phpmyadmin config to the file
+
+"Include /etc/phpmyadmin/apache.conf"
+
+Restart apache: service apache2 restart
+
+Set Up the .htaccess File
+-------------------------
+
+#gedit /etc/phpmyadmin/apache.conf
+
+ add the line “AllowOverride All” under “Directory Index”
+
+ look like follwing :
+
+<Directory /usr/share/phpmyadmin>
+        Options FollowSymLinks
+        DirectoryIndex index.php
+        AllowOverride All
+        [...]
+
+Configure the .htaccess file
+----------------------------
+
+#gedit /usr/share/phpmyadmin/.htaccess
+
+Copy and paste following lines:
+
+AuthType Basic
+AuthName "Restricted Files"
+AuthUserFile /etc/apache2/.phpmyadmin.htpasswd
+Require valid-user
+
+Create the htpasswd file
+------------------------
+
+#htpasswd -c /etc/apache2/.phpmyadmin.htpasswd username
+
+A prompt will ask you to provide and confirm your password
+
+Restart apache :
+ #service apache2 restart
+
+
+NameVirtualHost *:443
+<VirtualHost *:443>
+  DocumentRoot /var/www/html/payrexx_335
+  ServerName demo.payrexx
+  ServerAlias *.payrexx
+  SSLEngine on
+  SSLCertificateFile /etc/pki/tls/certs/ca.crt
+  SSLCertificateKeyFile /etc/pki/tls/private/ca.key
+  <Directory "/var/www/html/payrexx_335">
+      AllowOverride All
+      Allow from all   
+  </Directory>
+</VirtualHost>
+
