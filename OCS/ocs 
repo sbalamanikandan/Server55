@@ -1,0 +1,101 @@
+OCS Inventory Installation & Configuration 
+
+1.reading about OCS and understanding the concept 
+
+OCS server
+ 
+OCS agent 
+ 
+ ->DB
+ ->Administrator
+ ->Managememnt
+ ->Deployment
+
+2.Where & when it's need and uses
+  
+Under the lan system
+
+   For know about lan system SW/HW information
+
+   To install packages
+ 
+   TO sharing the Files & packges 
+     
+3.what are all the packages needed for hardware and software
+   
+   Apache
+   PHP
+   mysql
+   perl
+   ssl 
+   OCS Server version :2.0.5(above)
+   OCS Agent version :2.0.5(above) 
+
+4.Installation 
+
+Sever for CenrOS 
+
+Agent for windows System 
+
+5.Configuration 
+ 
+
+
+
+Agent Installation and configuration                          server version 2.1.2
+-------------------------------------                         Agent version 2.1.1
+-------------------------------------           
+
+pre require packeges
+
+
+Compress : Zlib version 1.33
+
+Digest : MD5 version 2.33
+
+LWP : userAgent Version 1.21
+
+Net : IP Version 1.25
+
+Net SSLeay Version 1.25
+
+XML : Simple version 2.12
+
+Download require Agent version 
+
+Ocsinventory-Unix-Agent-2.1.1.tar.gz
+
+following code :
+
+#tar zxvf ocsinventory-unix-agent-2.1.1.tar.gz
+
+#cd package name 
+
+#perl Makefile.pl
+
+#make 
+
+#make install 
+
+
+it will ask some question for postinstallation.pl script 
+
+
+-----
+-----
+----
+
+then 
+
+create /var/lib/ocsinventory-agent/http:_192.168.162.133_ocsinventory/snmp directory...
+
+copying SNMP MIBs XML files ..
+
+Activating modules if needed 
+
+lanuching OCS agent 
+
+success !!!!
+
+
+

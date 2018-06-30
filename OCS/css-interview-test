@@ -1,0 +1,25 @@
+css Basic level questions:
+
+Ex:
+
+1. Types of css
+
+Ans: 3 types (inline, internal and external)
+
+2. How to define styles using id and class in css 
+
+Ans: 
+Id = #selectorName
+class = .selectorName 
+
+3. How to link css file in html file.
+
+<link rel="stylesheet" href="path">
+
+4. Which selectors name should be unique? 
+
+Ans: Id name should be unique
+
+5. How to load images from css?
+
+Ans: background-image : url(..);
