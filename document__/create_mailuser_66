@@ -1,0 +1,11 @@
+       mkdir /home/latha/Maildir
+  637  mkdir /home/sharmisthasen/Maildir
+  638  chown  latha:latha /home/latha/Maildir
+  639  chmod -R 700 /home/latha/Maildir
+  640  chown  sharmisthasen:sharmisthasen /home/sharmisthasen/Maildir
+  641  chmod -R 700 /home/sharmisthasen/Maildir
+
+Making Mail Directory For All Users:
+====================================
+
+ 
