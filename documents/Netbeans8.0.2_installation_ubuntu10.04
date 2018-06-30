@@ -1,0 +1,13 @@
+* Go to terminal and then type 
+       "gedit /etc/apt/sources.list" to add follows
+deb http://ppa.launchpad.net/webupd8team/java/ubuntu lucid main 
+deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu lucid main 
+
+Refer this link(https://launchpad.net/~webupd8team/+archive/ubuntu/java)
+
+* sudo apt-get update
+
+* sudo apt-get install oracle-java7-installer
+
+* Download the netbeans8.0.2 package and extract it to /usr/local/netbeans
+

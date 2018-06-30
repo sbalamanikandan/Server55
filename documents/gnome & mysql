@@ -1,0 +1,4 @@
+Resetting Gnome-panel : gconftool-2 --shutdown && rm -rf ~/.gconf/apps/panel && pkill gnome-panel
+
+change root password in mysql : mysqladmin -u root -p'abc' password '123456'
+set new root password in mysql : mysqladmin -u root password 123456

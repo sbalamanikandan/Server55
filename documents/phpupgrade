@@ -1,0 +1,16 @@
+                                                                               PHP version upgrade
+
+Inside /etc/apt/sources.list we add
+
+deb http://ppa.launchpad.net/ondrej/php5-oldstable/ubuntu lucid main 
+deb-src http://ppa.launchpad.net/ondrej/php5-oldstable/ubuntu lucid main
+
+And then we add his key and update the system
+
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E5267A6C
+apt-get update
+
+Now, we can get the new PHP5.4!
+
+apt-get install libapache2-mod-php5
+

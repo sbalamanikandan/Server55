@@ -1,0 +1,122 @@
+<div id="contactFeedback">[[CONTACT_FEEDBACK_TEXT]]</div>
+<div id="contactDescription"><!-- BEGIN formText -->[[12_FORM_TEXT]]<!-- END formText --></div>
+<div id="contactFormError">[[TXT_NEW_ENTRY_ERORR]]</div>
+<!-- BEGIN contact_form -->
+<form id="contactForm" class="contactForm" action="index.php?section=contact&amp;cmd=12" method="post" enctype="multipart/form-data" onsubmit="return checkAllFields();">
+    <fieldset id="contactFrame">
+    <legend>[[12_FORM_NAME]]</legend>
+<div class="form-divider full-width">
+<div class="contact row grid6">
+<label for="contactFormFieldId_109">[[109_LABEL]]<strong class="is_required">*</strong></label>
+<select class="contactFormClass_special" name="contactFormField_109" id="contactFormFieldId_109">
+<!-- BEGIN field_109 -->
+<option value='[[109_VALUE]]' [[SELECTED_109]]>[[109_VALUE]]</option>
+<!-- END field_109 -->
+</select>
+</div>
+<div class="contact row grid6">
+<label for="contactFormFieldId_116">[[116_LABEL]]<strong class="is_required">*</strong></label>
+<input class="contactFormClass_text" id="contactFormFieldId_116" type="text" name="contactFormField_116" value="[[116_VALUE]]" />
+</div>
+</div>
+<div class="form-divider full-width">
+<div class="contact row grid6">
+<label for="contactFormFieldId_91">[[91_LABEL]]<strong class="is_required">*</strong></label>
+<input class="contactFormClass_text" id="contactFormFieldId_91" type="text" name="contactFormField_91" value="[[91_VALUE]]" />
+</div>
+<div class="contact row grid6">
+<label for="contactFormFieldId_92">[[92_LABEL]]<strong class="is_required">*</strong></label>
+<input class="contactFormClass_text" id="contactFormFieldId_92" type="text" name="contactFormField_92" value="[[92_VALUE]]" />
+</div>
+</div>
+<div class="form-divider full-width">
+<div class="contact row grid6">
+<label for="contactFormFieldId_93">[[93_LABEL]]<strong class="is_required">*</strong></label>
+<input class="contactFormClass_text" id="contactFormFieldId_93" type="text" name="contactFormField_93" value="[[93_VALUE]]" />
+</div>
+<div class="contact row grid6">
+<label for="contactFormFieldId_94">[[94_LABEL]]<strong class="is_required">*</strong></label>
+<input class="contactFormClass_text" id="contactFormFieldId_94" type="text" name="contactFormField_94" value="[[94_VALUE]]" />
+</div>
+</div>
+<div class="form-divider full-width">
+<div class="contact row grid6">
+<label for="contactFormFieldId_95">[[95_LABEL]]<strong class="is_required">*</strong></label>
+<input class="contactFormClass_special" id="contactFormFieldId_95" type="text" name="contactFormField_95" value="[[95_VALUE]]" />
+</div>
+<div class="contact row grid6">
+<label for="contactFormFieldId_117">[[117_LABEL]]<strong class="is_required">*</strong></label>
+<input class="contactFormClass_text" id="contactFormFieldId_117" type="text" name="contactFormField_117" value="[[117_VALUE]]" />
+</div>
+</div>
+<div class="form-divider full-width">
+<div class="contact row grid6">
+<label for="contactFormFieldId_97">[[97_LABEL]]</label>
+<input class="contactFormClass_text" id="contactFormFieldId_97" type="text" name="contactFormField_97" value="[[97_VALUE]]" />
+</div>
+<div class="contact row grid6">
+<label for="contactFormFieldId_98">[[98_LABEL]]</label>
+<input class="contactFormClass_date date" type="text" name="contactFormField_98" id="contactFormFieldId_98" />
+</div>
+</div>
+<div class="form-divider full-width">
+<div class="contact row grid6">
+<label for="contactFormFieldId_103">[[103_LABEL]]</label>
+<input class="contactFormClass_date date" type="text" name="contactFormField_103" id="contactFormFieldId_103" />
+</div>
+<div class="contact row grid6">
+<label for="contactFormFieldId_99">[[99_LABEL]]<strong class="is_required">*</strong></label>
+<input class="contactFormClass_text" id="contactFormFieldId_99" type="text" name="contactFormField_99" value="[[99_VALUE]]" />
+</div>
+</div>
+<div class="form-divider full-width">
+<div class="grid6">
+<div class="contact row">
+<label for="contactFormFieldId_100">[[100_LABEL]]<strong class="is_required">*</strong></label>
+<input class="contactFormClass_text" id="contactFormFieldId_100" type="text" name="contactFormField_100" value="[[100_VALUE]]" />
+</div>
+<div class="contact row">
+<label for="contactFormFieldId_101">[[101_LABEL]]</label>
+<input class="contactFormClass_text" id="contactFormFieldId_101" type="text" name="contactFormField_101" value="[[101_VALUE]]" />
+</div>
+</div>
+<div class="contact row grid6">
+<label for="contactFormFieldId_102">[[102_LABEL]]</label>
+<textarea class="contactFormClass_textarea" name="contactFormField_102" id="contactFormFieldId_102" rows="5" cols="20">[[102_VALUE]]</textarea>
+</div>
+</div>
+
+<div class="contact row" id="upload-title">
+<div class="contactFormClass_label">Anglagen</div>
+</div>
+<div class="contact row" id="upload-head">
+<div class="contactFormClass_label">Anglagen zur Bewerbung hochladen</div>
+</div>
+<div class="contact row" id="upload-text">
+<div class="contactFormClass_label">Sie konnen hier enrweder ein gesamtes Bewerbungs-Dokument oder einzelne Dokumente hochladen.
+Folgende Dateiformate sind moglich:Word(doc,docx).PDF,JPG,PNG,GIF.
+Ein Einzeldokument darf die Grobe von 7 MB nicht uberschreiten.</div>
+</div>
+<div class="contact row">
+<label for="contactFormFieldId_106">[[106_LABEL]]</label>
+<div class="contactFormUpload"><div class="contactFormClass_uploadWidget" id="contactFormField_uploadWidget_106"></div>
+<input class="contactFormClass_file" id="contactFormFieldId_106" type="file" name="contactFormField_106" disabled="disabled"/></div>
+</div>
+<div class="contact row" id="form-check">
+<label for="contactFormFieldId_115">[[115_LABEL]]<strong class="is_required">*</strong></label>
+<input class="contactFormClass_checkbox" id="contactFormFieldId_115" type="checkbox" name="contactFormField_115" value="1" [[SELECTED_115]] />
+</div>
+<!-- BEGIN contact_form_captcha -->
+<div class="contact row">
+<label>[[TXT_CONTACT_CAPTCHA]]</label>
+[[CONTACT_CAPTCHA_CODE]]
+</div>
+<!-- END contact_form_captcha -->
+<div class="contact row" id="contact-submit">
+<input class="contactFormClass_button" type="submit" name="submitContactForm" value="[[TXT_CONTACT_SUBMIT]]" /><input class="contactFormClass_button" type="reset" value="[[TXT_CONTACT_RESET]]" />
+<input type="hidden" name="unique_id" value="[[CONTACT_UNIQUE_ID]]" />
+</div>
+</fieldset>
+</form>
+<!-- END contact_form -->
+[[CONTACT_JAVASCRIPT]]

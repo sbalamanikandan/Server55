@@ -1,0 +1,7 @@
+gconftool --recursive-unset /apps/panel
+rm -rf ~/.gconf/apps/panel
+pkill gnome-panel
+
+
+
+Resetting Gnome-panel : gconftool-2 --shutdown && rm -rf ~/.gconf/apps/panel && pkill gnome-panel

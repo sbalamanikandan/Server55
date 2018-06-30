@@ -1,0 +1,10 @@
+		AFTER INSTALL UBUNTU OS
+
+i)set ip and proxy settings
+ii)through snaptic update softwares(before  install packages, set squid permission)
+iii)set date : date --set "03 FEBRUARY 2014 4:44 PM"
+iv)firefox update and install firebug 1.11.4
+v)iptux,gimp,lamp,php5,netbeans with plugins,kdesvn,codesnipper,chromium browser
+vi)htaccess enabled, permission for www,mnt and media
+vii)autopoweroff
+

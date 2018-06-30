@@ -1,0 +1,6 @@
+In desktop right click to view menu slowly
+
+HKEY_CLASSES_ROOT \ Directory \ Background \ shellex \ ContextMenuHandlers
+
+
+Delete that key

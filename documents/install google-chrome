@@ -1,0 +1,22 @@
+vim /etc/yum.repos.d/google-chrome.repo
+[google-chrome]
+name=google-chrome
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+
+
+yum install google-chrome-stable
+
+wget http://chrome.richardlloyd.org.uk/install_chrome.sh
+chmod u+x install_chrome.sh
+./install_chrome.sh
+
+google-chrome &
+
+
+
+vim /opt/google/chrome/google-chrome
+exec -a "$0" "$HERE/chrome" "$@" --user-data-dir $HOME
+

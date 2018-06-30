@@ -1,0 +1,39 @@
+ADD source list:
+
+deb http://ppa.launchpad.net/ondrej/php5/ubuntu precise main 
+deb-src http://ppa.launchpad.net/ondrej/php5/ubuntu precise main 
+
+sudo add-apt-repository ppa:ondrej/php5
+sudo apt-get install python-software-properties
+sudo apt-get update
+
+
+#sudo apt-get install php5-common php5-mysql php5-xmlrpc php5-cgi php5-curl php5-gd php5-cli php5-fpm php-apc php-pear php5-dev php5-imap php5-mcrypt
+
+apt-get install php5
+
+
+php5 -v
+http://geminihzh.blogspot.in/2014/03/php-52-54-55-upgradedowngrade-in-ubuntu.html
+------------
+Apache
+
+ADD source list:
+
+
+deb http://ppa.launchpad.net/ondrej/apache2/ubuntu precise main 
+deb-src http://ppa.launchpad.net/ondrej/apache2/ubuntu precise main
+
+sudo apt-get update
+
+apt-get install apache2
+
+
+----------------
+error downloading index.php : sudo apt-get install libapache2-mod-php5
+
+--------
+ln -s /etc/phpmyadmin/apache.conf /etc/apache2/sites-available/phpmyadmin.conf
+
+a2ensite phpmyadmin
+--------------- 
